@@ -1,0 +1,55 @@
+//Fibonacci Series using Recursion
+#include<bits/stdc++.h>
+
+using namespace std;
+ 
+
+int fib(int n)
+{
+
+    if (n <= 1)
+
+        return n;
+
+    return fib(n-1) + fib(n-2);
+}
+ 
+
+int main ()
+{
+
+    int n = 9;
+
+    cout << fib(n);
+
+    getchar();
+
+    return 0;
+}
+
+
+
+//Fibonacci series without using recursion
+
+
+import java.util.Scanner;
+
+public class fibonacciExample {
+	public static void main(String[] args)
+	{
+		  int i = 1, t1 = 0, t2 = 1;
+		  Scanner input = new Scanner(System.in);
+		  System.out.println("Enter the number to limit Fibonacci series: ");
+		  int num = input.nextInt();
+		  System.out.println("First " + num + " terms: ");
+		  
+		  while (i <= num) {
+		   System.out.print(t1 + " ");
+		   int sum = t1 + t2;
+		   t1 = t2;
+		   t2 = sum;
+		   i++;
+		  }	
+		  input.close();
+	}
+}
